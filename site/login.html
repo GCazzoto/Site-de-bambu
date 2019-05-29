@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="blog">
+    <nav class="bambu1">
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="#">LOGIN</a>
+            </li>
+            <li>
+                <a href="cadastro.html">CADASTRO</a>
+            </li>
+            <li>
+                <a href="kaguya.html">KAGUYA</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- <div class="bambu5">
+        <img src="img/bambu3.png" class="bambu6">
+    </div> -->
+    <div class="bambu9">
+        <img src="img/celesteela_fundo.jpg " class="bambu10">
+    </div>
+    <div id="bambu11">
+        <img src="img/Celest.png" class="bambu12">
+    </div>
+    <div class="divform">
+        <form class="form1">
+            Usuario:
+            <br>
+            <input type="email" placeholder="ex: bambu@gmal.com" id="mail" required style="color: rgb(255, 255, 255)">
+            <div id="divMail" class="erro"></div>
+            <br>
+            <br> Senha:
+            <br>
+            <input type="password" placeholder="senha" id="senha" required style="color: rgb(255, 255, 255)">
+            <div id="divSenha" class="erro"></div>
+            <br>
+            <br>
+            <button type="submit" onclick="bambu()">ACESSAR</button>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    function bambu() {
+        divMail.innerHTML = "";
+        divSenha.innerHTML = "";
+
+
+        if (mail.value == '') {
+            divMail.innerHTML = ("preencha o campo Email corretamente");
+        }
+        if (senha.value == '') {
+            divSenha.innerHTML = ("preencha o campo senha corretamente");
+        }
+        else {
+            alert("logou com sucesso");
+        }
+    }
+
+</script>

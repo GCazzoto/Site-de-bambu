@@ -1,0 +1,311 @@
+.body {
+    margin : 0 ; 
+    background-color: rgb(125, 248, 232);
+
+}
+.bambu1 {
+    background-color: rgb(3, 160, 108);
+    position: absolute;
+
+}
+.bambu1 ul {
+    background-color: rgb(3, 160, 108);
+    margin: 0; 
+    text-align: right;
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.432);
+    position: fixed; 
+    top : 0;
+    padding: 0;
+    padding-right: 0;
+    width: 100%;
+    z-index: 10 ;
+    list-style: none;
+
+}
+.bambu1 ul li {
+    display: inline;
+    margin: 0;
+    display: inline;
+    padding-right: 1em;
+    
+}
+.bambu1 ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1em;
+    display: inline-block;
+}
+.bambu1 ul li a:hover {
+    color: rgb(2, 33, 34);
+    transition: 0.5s;
+}
+.bambu2 {
+    width: 100%;
+}
+.bambu3 {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    
+}
+.hist {
+    margin: 4em;
+    font-size: 20px;
+}
+.form1 { 
+    width: 400px;
+    margin: auto;
+    padding-top: 20%;
+}
+.divform {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+input[type=text] {
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    border-bottom: 2px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+}   
+input[type=text]:hover {
+    border-bottom: 2px solid rgb(0, 255, 128);
+    transition: 0.5s;
+}
+button[type=button] {
+    margin-left: 100px;
+    width: 50%;
+    height: 40px;
+    border-style: none;
+    background-color: rgb(2, 170, 67);
+    color: white;
+    outline: none; 
+    border: 2px solid black;
+    border-radius: 20px;
+}
+button[type=button]:hover {
+    background-color: rgb(241, 237, 237);
+    color: rgb(0, 10, 9);
+    border: 2px solid rgba(10, 211, 100, 0.74);
+    transition: 0.3s;
+}
+
+.bcadas {
+    background-color: rgba(43, 255, 0, 0.507) ;
+}
+.back {
+    width: 100%;
+}
+.imgback {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.blog {
+    background-color: rgba(43, 255, 0, 0.507)
+}
+.bambu5 {
+    width: 100%;
+}
+.bambu6 {
+    width: 100%;
+    height: 200px;
+}
+.bkagu {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}
+.bambu7 ul {
+    background-color: rgba(3, 160, 108, 0);
+    margin: 0; 
+    text-align: right;
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.432);
+    position: fixed; 
+    top : 0;
+    padding: 0;
+    padding-right: 0;
+    width: 100%;
+    z-index: 10 ;
+    list-style: none;
+
+}
+.bambu7 ul li {
+    display: inline;
+    margin: 0;
+    display: inline;
+    padding-right: 1em;
+    
+}
+.bambu7 ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1em;
+    display: inline-block;
+}
+.bambu7 ul li a:hover {
+    color: rgb(2, 33, 34);
+    transition: 0.5s;
+}
+.kagu {
+    background-color: rgba(148, 228, 155, 0.486);
+}
+.paragrafo {
+    background-color: rgba(105, 173, 114, 0.37);
+
+}
+.fotos  {
+    background-color: rgb(0, 255, 191);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1em;
+    display: inline-block;
+    list-style: none;
+    margin: 5%;
+    margin-left: 550px;
+    border-style: solid;
+    color: black;
+    
+}
+.fotos li a {
+ margin: 0%;
+ text-decoration: none;
+ color: black;    
+}
+.bambu8 ul {
+    background-color: rgba(49, 247, 148, 0.178);
+    margin: 0; 
+    text-align: right;
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.432);
+    position: fixed; 
+    top : 0;
+    padding: 0;
+    padding-right: 0;
+    width: 100%;
+    z-index: 10 ;
+    list-style: none;
+
+}
+.bambu8 ul li {
+    display: inline;
+    margin: 0;
+    display: inline;
+    padding-right: 1em;
+    
+}
+.bambu8 ul li a {
+    color: rgb(7, 2, 2);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1em;
+    display: inline-block;
+}
+.bambu8 ul li a:hover {
+    color: rgb(2, 33, 34);
+    transition: 0.5s;
+}
+.bfotos {
+    background-color: aquamarine;
+}
+.bk {
+    width: 50%;
+    height: 500px;
+    background-color: black;
+    border-style: solid;
+    margin-left: 350px;
+}
+.frase {
+    margin-left: 600px;
+    margin-top: 70px;
+}
+.frase2 {
+    margin-left: 600px;
+
+}
+input[type=password] {
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    border-bottom: 2px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+}   
+input[type=password]:hover {
+    border-bottom: 2px solid rgb(0, 255, 128);
+    transition: 0.5s;
+}
+button[type=submit] {
+    margin-left: 100px;
+    width: 50%;
+    height: 40px;
+    border-style: none;
+    background-color: rgb(2, 170, 67);
+    color: white;
+    outline: none; 
+    border: 2px solid black;
+    border-radius: 20px;
+}
+button[type=submit]:hover {
+    background-color: rgb(241, 237, 237);
+    color: rgb(0, 10, 9);
+    border: 2px solid rgba(10, 211, 100, 0.74);
+    transition: 0.3s;
+}
+input[type=number] {
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    border-bottom: 2px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+}   
+input[type=number]:hover {
+    border-bottom: 2px solid rgb(0, 255, 128);
+    transition: 0.5s;
+}
+input[type=email] {
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    border-bottom: 2px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+}   
+input[type=email]:hover {
+    border-bottom: 2px solid rgb(0, 255, 128);
+    transition: 0.5s;
+}
+
+.Cel {
+      
+      position: absolute;
+      margin-right: 200px;
+      margin-top: 300px;
+    }
+.erro {
+    color:red;
+}
+.bambu9, .bambu11 {
+    width: 100%;
+}
+.bambu10,.bambu12 {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    position: absolute;
+}
+.bambu11,.bambu12 {
+    display: none;
+}
+@media (min-width: 1080px) {
+    .bambu9, .bambu10 {
+        display: none;
+    }
+    .bambu11,.bambu12 {
+        display: block;
+    }
+}

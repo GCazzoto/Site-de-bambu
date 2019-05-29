@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="bcadas">
+    <nav class="bambu1">
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="Login.html">LOGIN</a>
+            </li>
+            <li>
+                <a href="#">CADASTRO</a>
+            </li>
+            <li>
+                <a href="kaguya.html">KAGUYA</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="back">
+        <img src="img/bambu3.png" class="imgback">
+    </div>
+
+    <div class="Cel">
+        <img src="img/SMArt_Celesteela.png" alt="">
+    </div>
+    <div class="divform">
+        <form class="form1">
+            Usuario:
+            <br>
+            <input type="email" placeholder="ex: bambu@gmal.com" id="mail" required>
+            <div id="divMail" class="erro"></div>
+            <br>
+            <br> Senha:
+            <br>
+            <input type="password" placeholder="digite sua senha" required id="senha" required>
+            <div id="divSenha" class="erro"></div>
+            <br>
+            <br> Telefone:
+            <br>
+            <input type="number" placeholder="ex: (00)00000-0000" id="tel" required>
+            <div id="divTel" class="erro"></div>
+            <br>
+            <br> Endereço:
+            <br>
+            <input type="text" placeholder="ex: Avenida Paulista N°xx" id="end" required>
+            <div id="divEnd" class="erro"></div>
+            <br>
+            <br>
+            <button type="submit" onclick="bambu()" class="button">CADASTRAR</button>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    function bambu() {
+        divMail.innerHTML = "";
+        divSenha.innerHTML = "";
+        divTel.innerHTML = "";
+        divEnd.innerHTML = "";
+
+        if (mail.value == '') {
+            divMail.innerHTML = ("preencha o campo Email corretamente");
+        }
+        if (senha.value == '') {
+            divSenha.innerHTML = ("preencha o campo senha corretamente");
+        }
+        if (tel.value == '') {
+            divTel.innerHTML = ("preencha o campo telefone corretamente");
+        }
+        if (end.value == '') {
+            divEnd.innerHTML = ("preencha o campo endereço  corretatente");
+        }
+        else {
+            alert("cadastrou com sucesso");
+        }
+
+    }
+</script>
