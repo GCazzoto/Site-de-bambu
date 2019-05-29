@@ -42,26 +42,26 @@
         <form class="form1">
             Usuario:
             <br>
-            <input type="email" placeholder="ex: bambu@gmal.com" id="mail" required>
+            <input type="email" placeholder="ex: bambu@gmal.com" id="mail" required minlength="4">
             <div id="divMail" class="erro"></div>
             <br>
             <br> Senha:
             <br>
-            <input type="password" placeholder="digite sua senha" required id="senha" required>
+            <input type="password" placeholder="digite sua senha" required id="senha" required minlength="4">
             <div id="divSenha" class="erro"></div>
             <br>
             <br> Telefone:
             <br>
-            <input type="number" placeholder="ex: (00)00000-0000" id="tel" required>
+            <input type="number" placeholder="ex: 00000-0000" id="tel" required maxlength="12">
             <div id="divTel" class="erro"></div>
             <br>
             <br> Endereço:
             <br>
-            <input type="text" placeholder="ex: Avenida Paulista N°xx" id="end" required>
+            <input type="text" placeholder="ex: Avenida Paulista N°xx" id="end" required minlength="4">
             <div id="divEnd" class="erro"></div>
             <br>
             <br>
-            <button type="submit" onclick="bambu()" class="button">CADASTRAR</button>
+            <button id="btn_entrar" type="submit" onclick="bambu()" class="button">CADASTRAR</button>
         </form>
     </div>
 </body>
@@ -90,5 +90,41 @@
             alert("cadastrou com sucesso");
         }
 
+    }
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
     }
 </script>
