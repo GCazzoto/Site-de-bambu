@@ -41,19 +41,19 @@
         <img src="img/Celest.png" class="bambu12">
     </div>
     <div class="divform">
-        <form class="form1" id="form_login" method="post" onsubmit="return entrar()">
+        <form class="form1" id="form_login" onsubmit="return entrar()">
             Usuario:
             <br>
-            <input type="email" placeholder="ex: bambu@gmal.com" id="mail" required style="color: rgb(255, 255, 255)">
+            <input name="login" type="email" placeholder="ex: bambu@gmal.com" id="mail" required style="color: rgb(255, 255, 255)">
             <div id="divMail" class="erro"></div>
             <br>
             <br> Senha:
             <br>
-            <input type="password" placeholder="senha" id="senha" required style="color: rgb(255, 255, 255)">
+            <input name="senha" type="password" placeholder="senha" id="senha" required style="color: rgb(255, 255, 255)">
             <div id="divSenha" class="erro"></div>
             <br>
             <br>
-            <button type="submit" onclick="bambu()" id="btn_entrar">ACESSAR</button>
+            <button type="submit" id="btn_entrar">ACESSAR</button>
         </form>
     </div>
 </body>
@@ -111,15 +111,15 @@
     }
 
     function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.display = 'block';
-        div_erro.style.display = 'none';
+        // btn_entrar.disabled = true;
+        // img_aguarde.style.display = 'block';
+        // div_erro.style.display = 'none';
     }
 
     function finalizar_aguardar() {
-        btn_entrar.disabled = false;
-        img_aguarde.style.display = 'none';
-        div_erro.style.display = 'block';
+        // btn_entrar.disabled = false;
+        // img_aguarde.style.display = 'none';
+        // div_erro.style.display = 'block';
     }
 
 
