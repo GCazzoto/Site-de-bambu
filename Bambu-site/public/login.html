@@ -41,7 +41,7 @@
         <img src="img/Celest.png" class="bambu12">
     </div>
     <div class="divform">
-        <form class="form1">
+        <form class="form1" id="form_login" method="post" onsubmit="return entrar()">
             Usuario:
             <br>
             <input type="email" placeholder="ex: bambu@gmal.com" id="mail" required style="color: rgb(255, 255, 255)">
@@ -53,7 +53,7 @@
             <div id="divSenha" class="erro"></div>
             <br>
             <br>
-            <button type="submit" onclick="bambu()">ACESSAR</button>
+            <button type="submit" onclick="bambu()" id="btn_entrar">ACESSAR</button>
         </form>
     </div>
 </body>
@@ -75,5 +75,52 @@
             alert("logou com sucesso");
         }
     }
+
+    verificarAutenticacao();
+
+    function verificarAutenticacao() {
+        if (sessionStorage.usuario_bandtec != undefined) {
+            window.location.href = 'index.html';
+        }
+    }
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/entrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                response.json().then(function (resposta) {
+
+                    sessionStorage.usuario_bandtec = resposta.nome;
+                    verificarAutenticacao();
+
+                });
+            } else {
+
+                console.log('Erro de login!');
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
+    }
+
 
 </script>

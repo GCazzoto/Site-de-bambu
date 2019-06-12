@@ -53,7 +53,7 @@ router.post('/cadastrar', function (req, res, next) {
 	  // coloque a frase de erro que quiser aqui. Ela vai aparecer no formulário de cadastro
       throw new Error(`Dados de cadastro não chegaram completos: ${login} / ${senha} / ${nome}`);
     }
-    return banco.sql.query(`select count(*) as contagem from usuario where login = '${login}'`);
+    return banco.sql.query(`select count(*) as contagem from Site1 where loginsite = '${login}'`);
   }).then(consulta => {
 
 	if (consulta.recordset[0].contagem >= 1) {
@@ -73,7 +73,7 @@ router.post('/cadastrar', function (req, res, next) {
   }).finally(() => {
 	  if (cadastro_valido) {		  
 			  
-    banco.sql.query(`insert into Site1 (USUARIOSITE, SENHASITE, TELEFONESITE, ENDEREÇOSITE) 
+    banco.sql.query(`insert into Site1 (nomesite, loginsite, senhasite) 
     values ('${nome}','${login}','${senha}')`).then(function() {
 			console.log(`Cadastro criado com sucesso!`);
 			res.sendStatus(201); 

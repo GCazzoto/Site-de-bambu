@@ -40,6 +40,9 @@
     </div>
     <div class="divform">
         <form class="form1" onsubmit="return cadastrar()" id="form_cadastro" method="POST">
+            Nome :
+            <br>
+            <input type="text" name="nome" placeholder="Seu nome">
             Usuario:
             <br>
             <input type="email" placeholder="ex: bambu@gmal.com" id="mail" required minlength="4" name="login">
@@ -50,7 +53,7 @@
             <input type="password" placeholder="digite sua senha" required id="senha" required minlength="4" name="senha">
             <div id="divSenha" class="erro"></div>
             <br>
-            <br> Telefone:
+            <!-- <br> Telefone:
             <br>
             <input type="number" placeholder="ex: 00000-0000" id="tel" required maxlength="12" name="telefone">
             <div id="divTel" class="erro"></div>
@@ -58,10 +61,10 @@
             <br> Endereço:
             <br>
             <input type="text" placeholder="ex: Avenida Paulista N°xx" id="end" required minlength="4" name="endereco">
-            <div id="divEnd" class="erro"></div>
+            <div id="divEnd" class="erro"></div> -->
             <br>
             <br>
-            <button id="btn_entrar" type="submit"  class="button">CADASTRAR</button>
+            <button id="btn_entrar" type="submit" class="button">CADASTRAR</button>
         </form>
     </div>
 </body>
@@ -89,7 +92,7 @@
         else {
             alert("cadastrou com sucesso");
         }
-        
+
 
 
     }
@@ -100,16 +103,16 @@
             method: "POST",
             body: formulario
         }).then(function (response) {
-            
+
             if (response.ok) {
 
-                window.location.href='login.html';
+                window.location.href = 'login.html';
 
             } else {
 
                 console.log('Erro de cadastro!');
                 response.text().then(function (resposta) {
-                    alert (resposta);
+                    alert(resposta);
                 });
                 finalizar_aguardar();
             }
